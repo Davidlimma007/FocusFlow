@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/focusflow_db
-    username: focusflow_user
-    password: focusflow_pass
+    username: focusflow
+    password: 1234
     driver-class-name: org.postgresql.Driver
 
   jpa:
