@@ -2,7 +2,8 @@
 
 ## 1. Visão Geral
 
-O **Focus Flow** é uma aplicação de gerenciamento de tarefas orientada à priorização inteligente. O objetivo é transformar listas estáticas de tarefas em um fluxo dinâmico, organizado por nível de prioridade, contexto e execução.
+O **Focus Flow** é uma aplicação de gerenciamento de tarefas orientada à priorização inteligente. 
+O objetivo é transformar listas estáticas de tarefas em um fluxo dinâmico, organizado por nível de prioridade, contexto e execução.
 
 A proposta central é simples:
 
@@ -63,14 +64,14 @@ O **Focus Flow** resolve isso através de:
 
 ## 5. Stack Tecnológica
 
-| Camada        | Tecnologia             |
-| ------------- | ---------------------- |
-| Backend       | Java + Spring Boot     |
-| Build         | Maven / Gradle         |
+| Camada        | Tecnologia   |
+| ------------- | ------------ |
+| Backend       | Java + Spring Boot |
+| Build         | Maven        |
 | Banco         | PostgreSQL (ou H2 dev) |
-| ORM           | Spring Data JPA        |
-| API           | REST                   |
-| Identificação | UUID                   |
+| ORM           | Spring Data JPA |
+| API           | REST         |
+| Identificação | UUID         |
 
 ---
 
@@ -100,7 +101,7 @@ focus-flow/
 ### Criar tarefa
 
 ```
-POST /tasks
+POST /api/v1/tasks
 ```
 
 ### Listar tarefas (paginado)
@@ -109,22 +110,22 @@ POST /tasks
 GET /tasks?page=0&size=10
 ```
 
-### Buscar por email
+### Buscar Específica
 
 ```
-GET /tasks/email/{email}
+GET /api/v1/tasks/{taskId}
 ```
 
-### Atualizar por email
+### Atualizar tarefa
 
 ```
-PUT /tasks/email/{email}
+PUT /api/v1/tasks/{taskId}
 ```
 
-### Deletar por email
+### Deletar tarefa
 
 ```
-DELETE /tasks/email/{email}
+DELETE /api/v1/tasks/{taskId}
 ```
 
 ---
