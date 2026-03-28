@@ -64,14 +64,14 @@ O **Focus Flow** resolve isso através de:
 
 ## 5. Stack Tecnológica
 
-| Camada        | Tecnologia   |
-| ------------- | ------------ |
-| Backend       | Java + Spring Boot |
-| Build         | Maven        |
+| Camada        | Tecnologia             |
+| ------------- |------------------------|
+| Backend       | Java + Spring Boot     |
+| Build         | Maven                  |
 | Banco         | PostgreSQL (ou H2 dev) |
-| ORM           | Spring Data JPA |
-| API           | REST         |
-| Identificação | UUID         |
+| ORM           | Spring Data JPA        |
+| API           | REST                   |
+| Identificação | UUID                   |
 
 ---
 
