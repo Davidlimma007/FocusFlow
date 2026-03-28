@@ -1,27 +1,23 @@
 version: "3.9"
 
 services:
-  postgres:
+  db:
     image: postgres:15
-    container_name: focusflow-focusflow
+    container_name: focusflow-db # Nome mais limpo e descritivo
     restart: always
-
     environment:
       POSTGRES_DB: focusflow_db
       POSTGRES_USER: focusflow
-      POSTGRES_PASSWORD: 1234
-
+      POSTGRES_PASSWORD: "1234" # Aspas evitam erros de interpretação de tipos (especialmente se for só números)
     ports:
       - "5432:5432"
-
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
     networks:
       - focusflow-network
 
 volumes:
-  postgres_data:
+  postgres_data: # Persistência de dados garantida
 
 networks:
   focusflow-network:
