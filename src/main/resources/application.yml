@@ -25,7 +25,7 @@ spring:
     # Local padrão onde o Flyway busca os arquivos V1__...sql
     locations: classpath:db/migration
     # Cria a tabela flyway_schema_history se ela não existir
-    baseline-on-migrate: true
+    baseline-on-migrate: false
 
 # Configuração de Logs para ver os parâmetros do SQL no console
 logging:
