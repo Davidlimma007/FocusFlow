@@ -1,16 +1,14 @@
 package com.davidlima.focusflow.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
-@Data
-@AllArgsConstructor
+@Table(name = "tb_users")
+@Getter
+@Setter
 @NoArgsConstructor
 public class User {
 

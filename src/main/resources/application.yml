@@ -1,14 +1,35 @@
 spring:
+  application:
+    name: focusflow
+
   datasource:
+    # Ajustado para o nome do banco definido no seu docker-compose.yml
     url: jdbc:postgresql://localhost:5432/focusflow_db
     username: focusflow
     password: 1234
     driver-class-name: org.postgresql.Driver
 
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      # 'validate' é o padrão de produção quando se usa Flyway
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+        highlight_sql: true
+
+  flyway:
+    enabled: true
+    # Local padrão onde o Flyway busca os arquivos V1__...sql
+    locations: classpath:db/migration
+    # Cria a tabela flyway_schema_history se ela não existir
+    baseline-on-migrate: true
+
+# Configuração de Logs para ver os parâmetros do SQL no console
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.flywaydb: INFO
